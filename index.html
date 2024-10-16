@@ -8,13 +8,49 @@
   </head>
   <body>
     <div class="login-container">
-        <form class="login" action="/home.html">
-          <label for="email">Email:</label><br />
-          <input type="text" id="email" name="email" /><br />
-          <label for="pass">Password:</label><br />
-          <input type="text" id="password" name="pass" /><br /><br />
-          <input type="submit" id="log" value="Login" />
-        </form>
+      <form id="loginForm" class="login" action="/home.html">
+        <h1>Shopping Website</h1>
+
+        <label for="email"></label><br />
+        <input type="text" id="email" name="email" placeholder="Your email..." required /><br />
+        <label for="pass"></label><br />
+        <input type="text" id="password" name="pass" placeholder="Password..." required /><br /><br />
+        <input type="submit" id="log" value="Login" />
+
+        <div class="divider">
+          <span class="divider-text">HOẶC</span>
+        </div>
+        
+        <button class="Google-login">
+          <span class="Google-icon">🌐</span> Đăng nhập bằng Google
+        </button> <br>
+        
+        <a href="#" class="forgot-password">Quên mật khẩu?</a>
+      </form>
+
+      
+
+
     </div>
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          const demoEmail = "ducthien@gmail.com";
+          const demoPassword = "123";
+
+          if (email === demoEmail && password === demoPassword) {
+            window.location.href = "home.html";
+            alert("Login successful!");
+          } else {
+            alert("Invalid credentials. Please try again.");
+          }
+        });
+    </script>
   </body>
 </html>

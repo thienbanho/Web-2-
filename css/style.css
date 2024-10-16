@@ -182,11 +182,69 @@ img {
 
 .login-container {
   display: flex;
+  align-items: center;
   justify-content: center;
-  height: 100vh;
+  text-align: center;
+  height: 60vh;
 }
 
 .login {
-  padding: 100px;
+  width: 350px; /* Điều chỉnh chiều rộng form theo nhu cầu */
+  padding: 40px;
+  background-color: #f0f0f0; /* Màu nền cho form, điều chỉnh theo nhu cầu */
+  border: 1px solid #ccc;
 }
 
+.login h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 10px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #a4cbcb;
+  cursor: pointer;
+  border-radius: 10px;
+
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.divider::before, .divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #333;
+}
+.divider-text {
+  padding: 0 10px;
+  color: #666;
+}
+
+.Google-login {
+  background-color: #0b1313;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  margin: 0 auto;
+}
+
+.Google-icon {
+  margin-right: 10px;
+}
+
+.forgot-password {
+  color: #4299e1;
+  text-decoration: none;
+  font-size: 0.9em;
+}
